@@ -1,0 +1,137 @@
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.controls input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.controls button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#notes-list {
+  list-style: none;
+  padding: 0;
+}
+
+.note-item {
+  background: #e3e3e3;
+  padding: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  border-radius: 4px;
+  cursor: grab; /* Indicates draggable */
+}
+
+.note-item.dragging {
+  opacity: 0.5;
+}
+
+.note-item.over {
+  border: 2px dashed #000;
+}
+
+.note-text {
+  display: inline-block;
+  width: 100%;
+}
+
+/* Style for the Edit button */
+.edit-btn {
+  position: absolute;
+  right: 70px; /* Position it to the left of the Delete button */
+  top: 10px;
+  background: #4CAF50;
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+/* Style for the Delete button */
+.delete-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+/* Style for the Edit input field */
+.edit-input {
+  width: 80%;
+  padding: 5px;
+  font-size: 16px;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-theme .container {
+  background: #1e1e1e;
+}
+
+body.dark-theme .note-item {
+  background: #2c2c2c;
+}
+
+body.dark-theme .delete-btn {
+  background: #ff6666;
+}
+
+body.dark-theme .edit-btn {
+  background: #66bb6a;
+}
+
+body.dark-theme .edit-input {
+  background: #3c3c3c;
+  color: #e0e0e0;
+  border: 1px solid #555;
+}
+
+/* Visual feedback during dragging */
+.sortable-chosen {
+  opacity: 0.7;
+}
+
+.sortable-ghost {
+  opacity: 0.4;
+}
